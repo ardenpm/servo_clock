@@ -8,7 +8,7 @@ To get running enable calibration mode to get your pins and angles, enter them i
 
 ## Background
 
-(Otvinta)[http://www.otvinta.com/] have created an amazing 3D printed, servo controlled digital clock. You can check out the full details of their build (here)[http://www.otvinta.com/download14.html] along with detailed instructions and STL files for printing.
+[Otvinta](http://www.otvinta.com/) have created an amazing 3D printed, servo controlled digital clock. You can check out the full details of their build [here](http://www.otvinta.com/download14.html) along with detailed instructions and STL files for printing.
 
 The original project uses a [Raspberry Pi 3](https://raspberrypi.org) running [Windows IoT Core](https://developer.microsoft.com/en-us/windows/iot) which talks to multiple [Pololu Maestro](https://www.pololu.com/product/1356) servo controllers over USB to move the servos. A custom application (binary only) is provided which reads the time and sets the clock.
 
