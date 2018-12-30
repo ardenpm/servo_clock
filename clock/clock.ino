@@ -224,45 +224,12 @@ class Clock {
     time(DateTime time) {
       int hour = time.hour();
       int minute = time.minute();
-    
+
       // Find the individual digits to display for the hour
-      if (hour > 9) {
-        if (hour > 19) {
-          digits[0]->number(2);
-          hour -= 20;
-        } else {
-          digits[0]->number(1);
-          hour -= 10;
-        }
-        digits[1]->number(hour);
-      } else {
-        digits[0]->number(0);
-        digits[1]->number(hour);
-      }
-    
-      // Find the individual digits to display for the minute
-      if (minute > 9) {
-        if (minute > 49) {
-          digits[2]->number(5);
-          minute -= 50;
-        } else if (minute > 39) {
-          digits[2]->number(4);
-          minute -= 40;
-        } else if (minute > 29) {
-          digits[2]->number(3);
-          minute -= 30;
-        } else if (minute > 19) {
-          digits[2]->number(2);
-          minute -= 20;
-        } else {
-          digits[2]->number(1);
-          minute -= 10;
-        }
-        digits[3]->number(minute);
-      } else {
-        digits[2]->number(0);
-        digits[3]->number(minute);
-      }
+      digits[0]->number(hour / 10);
+      digits[1]->number(hour % 10);
+      digits[2]->number(minute / 10);
+      digits[3]->number(minute % 10);
     }
     ~Clock() {
       for (int i = 0; i < digit_count; i++) {
